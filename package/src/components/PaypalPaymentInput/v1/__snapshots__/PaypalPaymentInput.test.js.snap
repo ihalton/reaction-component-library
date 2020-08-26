@@ -27,7 +27,7 @@ exports[`basic snapshot 1`] = `
 }
 
 <div>
-  StripeForm({})
+  PaypalForm({})
   <div
     className="c0"
   >
