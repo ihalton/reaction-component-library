@@ -39,10 +39,10 @@ class PaypalPaymentInput extends Component {
        */
       iconLock: PropTypes.node,
       /**
-       * Pass either the Reaction StripeForm component or your own component that
+       * Pass either the Reaction PaypalForm component or your own component that
        * accepts compatible props.
        */
-      StripeForm: CustomPropTypes.component.isRequired
+      PaypalForm: CustomPropTypes.component.isRequired
     }),
     /**
      * Pass true while the input data is in the process of being saved.
@@ -100,11 +100,11 @@ class PaypalPaymentInput extends Component {
   }
 
   render() {
-    const { className, components: { iconLock, StripeForm }, secureCaptionText } = this.props;
+    const { className, components: { iconLock, PaypalForm }, secureCaptionText } = this.props;
 
     return (
       <div className={className}>
-        <StripeForm
+        <PaypalForm
           isComplete={this.handleChangeReadyState}
           stripeRef={(stripe) => { this._stripe = stripe; }}
         />
