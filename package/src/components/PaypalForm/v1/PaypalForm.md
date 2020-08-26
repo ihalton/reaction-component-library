@@ -19,7 +19,7 @@ class MyComponent extends Component {
   render() {
     return (
       <div>
-        <StripeForm stripeRef={stripe => (this._stripe = stripe)} />
+        <PaypalForm stripeRef={stripe => (this._stripe = stripe)} />
       </div>
     );
   }
@@ -27,7 +27,7 @@ class MyComponent extends Component {
 ```
 
 ```jsx
-<StripeForm isComplete={() => false} />
+<PaypalForm isComplete={() => false} />
 ```
 
 ### Theme
