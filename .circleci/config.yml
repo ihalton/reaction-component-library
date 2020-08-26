@@ -136,6 +136,6 @@ workflows:
             - dockerfile-lint
             - eslint
             - test
-          # filters:
-          #   branches:
-          #     only: master
+          filters:
+            branches:
+              only: master
