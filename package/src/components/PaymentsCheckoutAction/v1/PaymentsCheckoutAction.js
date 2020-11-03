@@ -123,12 +123,12 @@ class PaymentsCheckoutAction extends Component {
     /**
      * totalAmount for paypal
      */
-    amount: PropTypes.number.isRequired,
+    amount: PropTypes.number,
 
     /**
      * cliendId for paypal
      */
-    clientId: PropTypes.string.isRequired
+    clientId: PropTypes.string
   };
 
   static defaultProps = {

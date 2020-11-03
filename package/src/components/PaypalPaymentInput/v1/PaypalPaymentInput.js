@@ -69,12 +69,12 @@ class PaypalPaymentInput extends Component {
     /**
      * totalAmount for paypal
      */
-    amount: PropTypes.number.isRequired,
+    amount: PropTypes.number,
 
     /**
      * clientId for paypal
      */
-    clientId: PropTypes.string.isRequired
+    clientId: PropTypes.string
   };
 
   state = { orderID: null, captureId: null };
