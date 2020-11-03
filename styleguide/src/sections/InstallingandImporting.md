@@ -125,6 +125,7 @@ import RegionInput from "@reactioncommerce/components/RegionInput/v1";
 import Select from "@reactioncommerce/components/Select/v1";
 import StockWarning from "@reactioncommerce/components/StockWarning/v1";
 import StripeForm from "@reactioncommerce/components/StripeForm/v1";
+import PaypalSmartButton from "@reactioncommerce/components/PaypalSmartButton/v1";
 import SelectableItem from "@reactioncommerce/components/SelectableItem/v1";
 import SelectableList from "@reactioncommerce/components/SelectableList/v1";
 import TextInput from "@reactioncommerce/components/TextInput/v1";
@@ -176,6 +177,7 @@ export default {
   spinner,
   StockWarning,
   StripeForm,
+  PaypalSmartButton,
   SelectableItem,
   SelectableList,
   TextInput

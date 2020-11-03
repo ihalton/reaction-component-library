@@ -12,6 +12,7 @@ Note that this component allows collecting information for multiple payments but
 
 ```jsx
 import StripePaymentInput from "../../StripePaymentInput/v1/StripePaymentInput";
+import PaypalPaymentInput from "../../PaypalPaymentInput/v1/PaypalPaymentInput";
 import ExampleIOUPaymentForm from "../../ExampleIOUPaymentForm/v1/ExampleIOUPaymentForm";
 const paymentMethods = [
   {
@@ -24,6 +25,12 @@ const paymentMethods = [
     displayName: "IOU",
     InputComponent: ExampleIOUPaymentForm,
     name: "iou_example",
+    shouldCollectBillingAddress: true
+  },
+  {
+    displayName: "Paypal",
+    InputComponent: PaypalPaymentInput,
+    name: "paypal",
     shouldCollectBillingAddress: true
   }
 ];
@@ -40,6 +47,7 @@ const paymentMethods = [
 
 ```jsx
 import StripePaymentInput from "../../StripePaymentInput/v1/StripePaymentInput";
+import PaypalPaymentInput from "../../PaypalPaymentInput/v1/PaypalPaymentInput";
 import ExampleIOUPaymentForm from "../../ExampleIOUPaymentForm/v1/ExampleIOUPaymentForm";
 const paymentMethods = [
   {
@@ -52,6 +60,12 @@ const paymentMethods = [
     displayName: "IOU",
     InputComponent: ExampleIOUPaymentForm,
     name: "iou_example",
+    shouldCollectBillingAddress: true
+  },
+  {
+    displayName: "Paypal",
+    InputComponent: PaypalPaymentInput,
+    name: "paypal",
     shouldCollectBillingAddress: true
   }
 ];
@@ -69,6 +83,7 @@ const paymentMethods = [
 
 ```jsx
 import StripePaymentInput from "../../StripePaymentInput/v1/StripePaymentInput";
+import PaypalPaymentInput from "../../PaypalPaymentInput/v1/PaypalPaymentInput";
 import ExampleIOUPaymentForm from "../../ExampleIOUPaymentForm/v1/ExampleIOUPaymentForm";
 const paymentMethods = [
   {
@@ -81,6 +96,12 @@ const paymentMethods = [
     displayName: "IOU",
     InputComponent: ExampleIOUPaymentForm,
     name: "iou_example",
+    shouldCollectBillingAddress: true
+  },
+  {
+    displayName: "Paypal",
+    InputComponent: PaypalPaymentInput,
+    name: "paypal",
     shouldCollectBillingAddress: true
   }
 ];
@@ -104,6 +125,7 @@ const alert = {
 
 ```jsx
 import StripePaymentInput from "../../StripePaymentInput/v1/StripePaymentInput";
+import PaypalPaymentInput from "../../PaypalPaymentInput/v1/PaypalPaymentInput";
 import ExampleIOUPaymentForm from "../../ExampleIOUPaymentForm/v1/ExampleIOUPaymentForm";
 const paymentMethods = [
   {
@@ -116,6 +138,12 @@ const paymentMethods = [
     displayName: "IOU",
     InputComponent: ExampleIOUPaymentForm,
     name: "iou_example",
+    shouldCollectBillingAddress: true
+  },
+  {
+    displayName: "Paypal",
+    InputComponent: PaypalPaymentInput,
+    name: "paypal",
     shouldCollectBillingAddress: true
   }
 ];
@@ -158,6 +186,7 @@ const addresses = [
 
 ```jsx
 import StripePaymentInput from "../../StripePaymentInput/v1/StripePaymentInput";
+import PaypalPaymentInput from "../../PaypalPaymentInput/v1/PaypalPaymentInput";
 import ExampleIOUPaymentForm from "../../ExampleIOUPaymentForm/v1/ExampleIOUPaymentForm";
 const paymentMethods = [
   {
@@ -170,6 +199,12 @@ const paymentMethods = [
     displayName: "IOU",
     InputComponent: ExampleIOUPaymentForm,
     name: "iou_example",
+    shouldCollectBillingAddress: true
+  },
+  {
+    displayName: "Paypal",
+    InputComponent: PaypalPaymentInput,
+    name: "paypal",
     shouldCollectBillingAddress: true
   }
 ];

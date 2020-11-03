@@ -85,7 +85,7 @@ function stringifyJSONCircularSafe(obj) {
   "SelectableList",
   "StripeForm",
   "StripePaymentInput",
-  "PaypalForm",
+  "PaypalSmartButton",
   "PaypalPaymentInput"
 ].forEach((componentName) => {
   mockComponents[componentName] = makeMockedComponent(componentName);

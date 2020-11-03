@@ -27,7 +27,7 @@ exports[`basic snapshot 1`] = `
 }
 
 <div>
-  PaypalForm({})
+  PaypalSmartButton({"options":"[Object]"})
   <div
     className="c0"
   >
