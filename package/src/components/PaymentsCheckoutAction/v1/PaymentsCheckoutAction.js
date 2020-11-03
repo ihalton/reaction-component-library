@@ -118,7 +118,17 @@ class PaymentsCheckoutAction extends Component {
     /**
      * Checkout process step number
      */
-    stepNumber: PropTypes.number.isRequired
+    stepNumber: PropTypes.number.isRequired,
+    
+    /**
+     * totalAmount for paypal
+     */
+    amount: PropTypes.number.isRequired,
+
+    /**
+     * cliendId for paypal
+     */
+    clientId: PropTypes.string.isRequired
   };
 
   static defaultProps = {
@@ -131,7 +141,7 @@ class PaymentsCheckoutAction extends Component {
   constructor(props) {
     super(props);
 
-    const { addresses, paymentMethods } = props;
+    const { addresses, paymentMethods, payments } = props;
 
     let selectedPaymentMethodName = null;
     if (Array.isArray(paymentMethods)) {
@@ -144,7 +154,7 @@ class PaymentsCheckoutAction extends Component {
     this.state = {
       billingAddress: addresses && addresses[0] ? addresses[0] : null,
       inputIsComplete: false,
-      selectedPaymentMethodName
+      selectedPaymentMethodName,
     };
   }
 
@@ -173,7 +183,7 @@ class PaymentsCheckoutAction extends Component {
     if (cappedPaymentAmount && typeof remainingAmountDue === "number") {
       cappedPaymentAmount = Math.min(cappedPaymentAmount, remainingAmountDue);
     }
-
+    
     await onSubmit({
       displayName: displayName || selectedPaymentMethod.displayName,
       payment: {
@@ -274,12 +284,13 @@ class PaymentsCheckoutAction extends Component {
       isSaving,
       label,
       paymentMethods,
-      stepNumber
+      stepNumber,
+      amount,
+      clientId
     } = this.props;
 
     const { selectedPaymentMethodName } = this.state;
     const selectedPaymentMethod = paymentMethods.find((method) => method.name === selectedPaymentMethodName);
-
     return (
       <div className={className}>
         <Title>
@@ -293,6 +304,8 @@ class PaymentsCheckoutAction extends Component {
             isSaving={isSaving}
             onReadyForSaveChange={this.handleInputReadyForSaveChange}
             onSubmit={this.handleInputComponentSubmit}
+            amount={amount}
+            clientId={clientId}
             ref={(instance) => { this._inputComponent = instance; }}
           />}
         {!!selectedPaymentMethod && !!selectedPaymentMethod.shouldCollectBillingAddress && this.renderBillingAddressForm()}

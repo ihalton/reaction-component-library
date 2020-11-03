@@ -18,6 +18,12 @@ const paymentMethods = [
     InputComponent: mockComponents.ExampleIOUPaymentForm,
     name: "iou_example",
     shouldCollectBillingAddress: true
+  },
+  {
+    displayName: "Paypal",
+    InputComponent: mockComponents.PaypalPaymentInput,
+    name: "paypal",
+    shouldCollectBillingAddress: true
   }
 ];
 

@@ -496,7 +496,8 @@ module.exports = {
             "PaymentsCheckoutAction",
             "ShippingAddressCheckoutAction",
             "StripePaymentCheckoutAction",
-            "StripePaymentInput"
+            "StripePaymentInput",
+            "PaypalPaymentInput"
           ],
           content: "styleguide/src/sections/Checkout.md",
           name: "Checkout"
@@ -508,7 +509,8 @@ module.exports = {
             "AddressForm",
             "AddressReview",
             "GuestForm",
-            "StripeForm"
+            "StripeForm",
+            "PaypalSmartButton",
           ],
           content: "styleguide/src/sections/StorefrontForms.md",
           name: "Forms"

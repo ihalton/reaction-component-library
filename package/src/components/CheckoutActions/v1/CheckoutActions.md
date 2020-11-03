@@ -72,6 +72,7 @@ const actions = [
 *Address postal codes that start with "10" will fail validation with 0 suggested addresses.*
 ```jsx
 import StripePaymentInput from "../../StripePaymentInput/v1/StripePaymentInput";
+import PaypalPaymentInput from "../../PaypalPaymentInput/v1/PaypalPaymentInput";
 import ExampleIOUPaymentForm from "../../ExampleIOUPaymentForm/v1/ExampleIOUPaymentForm";
 import ShippingAddressCheckoutAction from "../../ShippingAddressCheckoutAction/v1/ShippingAddressCheckoutAction";
 import FulfillmentOptionsCheckoutAction from "../../FulfillmentOptionsCheckoutAction/v1/FulfillmentOptionsCheckoutAction";
@@ -184,6 +185,12 @@ const paymentMethods = [
     displayName: "IOU",
     InputComponent: ExampleIOUPaymentForm,
     name: "iou_example",
+    shouldCollectBillingAddress: true
+  },
+  {
+    displayName: "Paypal",
+    InputComponent: PaypalPaymentInput,
+    name: "paypal",
     shouldCollectBillingAddress: true
   }
 ];

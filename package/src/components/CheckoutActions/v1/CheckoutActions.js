@@ -205,7 +205,6 @@ class CheckoutActions extends Component {
 
   handleActionSubmit = async (id, onSubmit, actionValue) => {
     this.setStateForAction(id, { isActive: false, isSaving: true });
-
     await onSubmit(actionValue);
 
     this.setStateForAction(id, { isSaving: false });
@@ -237,13 +236,14 @@ class CheckoutActions extends Component {
     return currentActiveActions;
   };
 
-  renderCompleteAction = ({ id, status, completeLabel, component, props }) => {
+  renderCompleteAction = ({ id, status, completeLabel, component, props, disabled }) => {
     const { components: { CheckoutActionComplete } } = this.props;
     return status === "complete" ? (
       <CheckoutActionComplete
         key={id}
         label={completeLabel}
         content={component.renderComplete(props)}
+        disabled={disabled}
         onClickChangeButton={() => {
           this.setStateForAction(id, { isActive: true });
         }}

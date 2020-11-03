@@ -92,17 +92,23 @@ class CheckoutActionComplete extends Component {
     /**
      * Checkout process step number
      */
-    stepNumber: PropTypes.number
+    stepNumber: PropTypes.number,
+
+    /**
+     * disable Change Action
+     */
+    disabled: PropTypes.bool
   };
 
   static defaultProps = {
-    changeButtonText: "Change"
+    changeButtonText: "Change",
+    disabled:false
   }
 
   handleOnChange = () => this.props.onClickChangeButton();
 
   render() {
-    const { className, components: { Button }, content, label, stepNumber, changeButtonText } = this.props;
+    const { className, components: { Button }, content, label, stepNumber, changeButtonText, disabled } = this.props;
 
     const step = stepNumber ? <Fragment>{stepNumber}.&nbsp;</Fragment> : null;
 
@@ -114,9 +120,12 @@ class CheckoutActionComplete extends Component {
         <ActionDetail>
           {content}
         </ActionDetail>
-        <ActionButton>
+        {
+          disabled?<span/>:<ActionButton>
           <Button actionType="important" onClick={this.handleOnChange} isShortHeight isTextOnly>{changeButtonText}</Button>
         </ActionButton>
+        }
+
       </ActionContainer>
     );
   }

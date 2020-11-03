@@ -52,7 +52,7 @@ import RegionInput from "../components/RegionInput/v1";
 import Select from "../components/Select/v1";
 import StockWarning from "../components/StockWarning/v1";
 import StripeForm from "../components/StripeForm/v1";
-import PaypalForm from "../components/PaypalForm/v1";
+import PaypalSmartButton from "../components/PaypalSmartButton/v1";
 import SelectableItem from "../components/SelectableItem/v1";
 import SelectableList from "../components/SelectableList/v1";
 import TextInput from "../components/TextInput/v1";
@@ -107,8 +107,8 @@ export default {
   spinner,
   StockWarning,
   StripeForm,
-  PaypalForm,
   SelectableItem,
   SelectableList,
-  TextInput
+  TextInput,
+  PaypalSmartButton
 };
