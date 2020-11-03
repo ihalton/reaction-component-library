@@ -88,6 +88,8 @@ jobs:
 
   docker-build-push:
     <<: *defaults
+    docker:
+      - image: node:12.18.4
     steps:
       - checkout
       - setup_remote_docker:
