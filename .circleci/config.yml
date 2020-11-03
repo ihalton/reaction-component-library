@@ -10,8 +10,7 @@ defaults: &defaults
     DOCKER_NAMESPACE: "modernglobal"
     DOCKER_NAME: "styleguide"
   docker:
-    - image: circleci/node:8.16.2-stretch
-
+    - image: circleci/node:12.19.0
 jobs:
   install-dependencies:
     <<: *defaults
