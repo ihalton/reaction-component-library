@@ -127,13 +127,13 @@ workflows:
           context: reaction-publish-docker
           requires:
             - dockerfile-lint
-            - eslint
+            # - eslint
             - test
       - publish-npm-package:
           context: reaction-publish-semantic-release
           requires:
             - dockerfile-lint
-            - eslint
+            # - eslint
             - test
           filters:
             branches:
