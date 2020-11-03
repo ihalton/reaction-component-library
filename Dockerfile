@@ -1,4 +1,4 @@
-FROM node:8-alpine
+FROM node:14.15.0-alpine
 
 ARG NAME=styleguide
 ARG DESCRIPTION="Reaction Commerce's Example Storefront Component Library"
